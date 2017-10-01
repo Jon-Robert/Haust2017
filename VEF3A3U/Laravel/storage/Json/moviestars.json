@@ -1,0 +1,22 @@
+{
+	"moviestars":[
+		{
+			"id": "1",
+			"name":"Tom Hanks",
+			"image":"https://upload.wikimedia.org/wikipedia/commons/6/66/Tom_Hanks_2014.jpg",
+			"info":"homas Jeffrey Hanks was born in Concord, California, to Janet Marylyn (Frager), a hospital worker, and Amos Mefford Hanks, an itinerant cook. His mothers family, originally surnamed Fraga, was entirely Portuguese, while his father was of mostly English ancestry. Tom grew up in what he has called a fractured family."
+		},
+		{
+			"id": "2",
+			"name":"Tom Cruise",
+			"image":"https://www.biography.com/.image/c_fill%2Ccs_srgb%2Cg_face%2Ch_300%2Cq_80%2Cw_300/MTE5NDg0MDU0OTM2NTg1NzQz/tom-cruise-9262645-1-402.jpg",
+			"info":"In 1976, if you had told fourteen year-old Franciscan seminary student Thomas Cruise Mapother IV that one day in the not too distant future he would be Tom Cruise, one of the top 100 movie stars of all time"
+		},
+		{
+			"id": "3",
+			"name":"Ben Stiller",
+			"image":"https://upload.wikimedia.org/wikipedia/commons/5/54/Ben-Stiller-%28MS1411200222%29.jpg",
+			"info":"Benjamin Edward Meara Stiller was born on November 30, 1965, in New York City, New York, to legendary comedians Jerry Stiller and Anne Meara."
+		}
+	]
+}

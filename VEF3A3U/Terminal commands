@@ -1,0 +1,8 @@
+scp -rp /Users/steini/Documents/Haust_2017\ /VEF3A3U/Laravel/database root@46.101.124.225:/var/www/laravel/
+
+scp -rp /Users/steini/Documents/Haust_2017\ /VEF3A3U/Laravel/routes root@46.101.124.225:/var/www/laravel/
+
+scp -rp /Users/steini/Documents/Haust_2017\ /VEF3A3U/Laravel/resources root@46.101.124.225:/var/www/laravel/
+
+
+scp -rp /Users/steini/Documents/Haust_2017\ /VEF3A3U/Laravel/.env root@46.101.124.225:/var/www/laravel/
