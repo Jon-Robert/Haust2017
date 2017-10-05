@@ -81,6 +81,8 @@ hættan á bak við XSS er að það leyfir attacker að setja inn content  inn 
 og modify hverning það er sýnt, og force fórnalamb að runna kóða sem attacker 
 gaf við loading á síðunni.
 
+*/
+
 
 
 
