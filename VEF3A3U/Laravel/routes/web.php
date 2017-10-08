@@ -13,11 +13,20 @@
 
 Route::get('show','jsonController@jsonIndex');
 route::get('json/{id}','jsonController@jsonDetail');
+Route::get('test','jsonController@test');
+Route::get('api','jsonController@getJson');
 
 
+Route::get('/master', function () {
+    return view('/Layout/header');
+});
+
+Route::get('/test', function () {
+    return view('insert');
+});
 
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
 });
 
 Route::get('index', function(){

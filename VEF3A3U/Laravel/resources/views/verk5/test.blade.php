@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
@@ -13,15 +13,39 @@
 <script src="semantic/dist/semantic.min.js"></script>
 </head>
 <body>
-	<div class="container">
-  <div class="row">
-  	@foreach ($moviestars as $key)
-    <div class="col-sm-4">
-    <h3><a href="/json/{{$key['id']}}">{{$key['name']}}</a></h3>
-  	<img src="{{$key['image']}}" height="150" width="150">
+<div>
+@foreach ($moviestars as $key)
+  <div class="item">
+    <div class="ui small image">
+      <img src="{{$key['image']}}">
     </div>
-    @endforeach
+    <div class="content">
+      <div class="header">{{$key['name']}}</div>
+      <div class="meta">
+        <span class="price">$1600</span>
+        <span class="stay">6 Weeks</span>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+    </div>
   </div>
+  @endforeach
 </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<

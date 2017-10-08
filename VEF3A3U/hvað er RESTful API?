@@ -1,0 +1,17 @@
+hvað er RESTful API?
+
+API  er application program interface  og er allstaðar
+basicly samningur frá einu software til annað og er structured request og response
+
+hvað er REST?
+Representational state transfer.
+Architecture style fyrir að byggja network forrit/app
+treystir á stateless, client-server protocol, næstum alltaf HTTP
+treats server objects eins og efni sem getur verið byggt og eytt
+og getur verið notað nánast með hverju forritunartungumáli
+
+svo er HTTP Methods sem þú notar fyrir API :
+GET: Retrieve data from a specific resource
+POST: Submit data to be processed to a specified resource
+DELEAT: Delete a specified resource
+PUT: Update a specified resource
