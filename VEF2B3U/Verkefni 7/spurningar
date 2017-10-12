@@ -1,0 +1,57 @@
+1. 
+EventListener
+
+þeir eru aðskildnir frá html og js og leyfa einu eventi að triggera mörg functions.
+og eru mun ólíkari að gera conflicts
+
+function checkUsername(){
+	var elMsg = document.getElementById('feedback');
+	if (this.value.lenght < 5){
+	elMsg.textContent = 'Username must be 5 characters or more';
+	} else {
+	elMsg.textContent = ' ';
+	}
+}
+
+var elUsername = document.getElementById('username');
+elUsername.addEventListener('blur',checkUsername, false);
+
+2. 
+
+kemur í veg fyrir að síðan frjósi ekki á meðan javascript er að klára einhverja akveðna skipun.
+ef að callback er notað, geturu látið javascript halda áfram á meðan önnur er enn að keyra.
+
+dæmi
+function foo(bar){
+	kóði
+	kóði 
+	// seinna function þegar efri kóði er búinn
+	bar();
+}
+
+3.
+röð að callback functions 
+
+4.
+ function checkUsername(e) {
+         var target = e.target;
+}
+var el = document.getElementById('username'); 
+el.addEventlistener('blur', checkUsername, false);
+
+5. 
+event flow 
+true þýðir capturing phase 
+false þýðir bubbling phase (false er skilgreint því það var ekki gert í IE8 eða eldri)
+
+6. 
+stopPropagation()
+  stops the bubbling of an event to parent elements,
+  preventing any parent event handlers from being executed.
+  Gagnlegt þegar að þú ert með dropdown menu eða mörg elements inní hvort öðru og með event listeners á þeim.
+
+preventDefault()
+  Hættir við eventið ef það er hægt að hætta við það. AKA að default action-ið sem tilheyrir eventinu mun ekki keyra.
+  meaning that the default action that belongs to the event will not occur.
+
+  Gagnlegt þegar þú ert með submit takka, og vilt ekki leyfa honum að senda eða ef þú ert með link sem þú vilt ekki að opnist þegar ýtt er á hann.
