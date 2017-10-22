@@ -1,0 +1,46 @@
+1. 
+ for - endurtekur sig þangað til að condition er náð og breytt í false.
+ for (i = 0, i < 4, i++) t.d.
+
+ for in - fer yfir probities names 
+ for ( varible in object) t.d.
+
+ for of - fer yfir probities values
+ for ( varible of object) t.d
+
+ sma dæmi 
+
+var arr = [3, 5, 7];
+arr.foo = 'hello';
+
+for (var i in arr) {
+   console.log(i); // logs "0", "1", "2", "foo"
+}
+
+for (var i of arr) {
+   console.log(i); // logs 3, 5, 7
+}
+
+
+3.
+basicly gerir string til að lesa miklu betri en það hefbundna
+console.log("hallo
+heimur");
+
+myndi koma út sem error í þessu tilviki
+
+console.log(`hallo
+	heimur`); 
+	myndi koma út sem: 
+
+hallo
+	heimur 
+
+þannig sé með breakline og whitespace
+svo er líka hægt að gera 
+var foo = "bar";
+console.log(`hallo hemur ${foo}); 
+sem myndi koma sem:: hallo heimur bar 
+
+þannig sé place holdur í staðinn fyrir 
+("hallo heimur "+foo);
