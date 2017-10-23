@@ -44,3 +44,33 @@ sem myndi koma sem:: hallo heimur bar
 
 þannig sé place holdur í staðinn fyrir 
 ("hallo heimur "+foo);
+
+4. 
+var myMap = new Map();
+myMap.set(function() {}, 'baz');
+console.log(myMap);
+
+5.
+
+
+
+6. 
+
+var passed = 3;
+
+var addTo = funtion (){
+	var inner = 2;
+	return passed + inner;
+};
+
+console.log(addTo()); // myndi returna 5 
+
+in javascript varibles are defined outside the function are automaticly available inside the function becasue javascript uses something called lexical scoping 
+means varible defined inner is not accessible outside but something defined outside is accessible inside
+
+the way it does this is with closure
+
+
+varðandi hvað þetta væri sniðugt fyrir er ég ekki alveg viss en það væri sniðugt til að halda öllum varibles á svipuðum stað ef það þarf að breyta því oft, og líka að það lifir lengur 
+
+
