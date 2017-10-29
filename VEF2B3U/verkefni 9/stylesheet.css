@@ -1,0 +1,9 @@
+.container {
+    margin-top: 250px;
+}
+
+.svar {
+    width: 45%;
+    cursor: pointer;
+    margin:5px 5px;
+}
