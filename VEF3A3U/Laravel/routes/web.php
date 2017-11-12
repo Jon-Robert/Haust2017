@@ -15,6 +15,18 @@ Route::get('show','jsonController@jsonIndex');
 route::get('json/{id}','jsonController@jsonDetail');
 Route::get('test','jsonController@test');
 Route::get('api','jsonController@getJson');
+Route::get('lokaverk','shopController@index');
+Route::get('lokaverk/{id}','shopController@getIndex');
+Route::get('derp','shopController@getIndex2');
+
+
+
+
+
+
+
+
+route::get('newIndex','IndexController@newIndex');
 
 
 Route::get('/master', function () {
