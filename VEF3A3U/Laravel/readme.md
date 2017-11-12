@@ -31,3 +31,6 @@ routes sem sendir á controller
 https://github.com/steinikarls/Haust2017/blob/master/VEF3A3U/Laravel/routes/web.php
 
 svo er json ekki að koma github dno why
+
+vefsíða 
+http://46.101.124.225/lokaverk
