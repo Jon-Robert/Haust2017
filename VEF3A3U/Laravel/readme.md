@@ -1,53 +1,33 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+verkefni 7 Felst með því að gera pöntunarsíðu sem á að gefa möguleika á panta mat. 
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+ég er að not Json skrá sem heldur utanum gögnin sem er því miður ekki að uploadast á github en er á larvel.
 
-## About Laravel
+það eru 2 json skrá ein sem les út gögn um úrval og annað sem les inn valið.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+það sem planið var ekki að hafa mynd til að byrja með en ég hugsa um að breyta því og gefa breytu um það síðar 
+þá setti ég dummy mynd fyrir allt.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+með html síðuna ætlaði ég að nota blade aðferðina chunk til að hafa 3 í row en það er einhver galli með því svo ég varð að sleppa því eins og 
+staðan er núna. 
+svo er líka hægt að sjá að ég nota blade rosa mikið í html
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+er að nota bootstrap og awesome fonts 
+er að nota jquery 
+og mitt eigið css líka.
 
-## Learning Laravel
+markaðurinn er ekki mikill fyrir þetta en hægt er að nota fyrir vinnuna til að panta mat, svo maður þarf ekki að fara á milli manna og spurja hvað þau vilja 
+sem tekur tíma sem hægt er að nota í annað, og kemur í veg fyrir mannleg mistök t.d. vitlaus matur.
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+controller
+https://github.com/steinikarls/Haust2017/blob/master/VEF3A3U/Laravel/app/Http/Controllers/shopController.php
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+mitt css 
+https://github.com/steinikarls/Haust2017/blob/master/VEF3A3U/Laravel/public/src/css/app.css
 
-## Laravel Sponsors
+views og derp er bara fyrir að testa næsta skref og vera viss að ég er að velja rétt
+https://github.com/steinikarls/Haust2017/tree/master/VEF3A3U/Laravel/resources/views/lokaverk
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+routes sem sendir á controller
+https://github.com/steinikarls/Haust2017/blob/master/VEF3A3U/Laravel/routes/web.php
 
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+svo er json ekki að koma github dno why
