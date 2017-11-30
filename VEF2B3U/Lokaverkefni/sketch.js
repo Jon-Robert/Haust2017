@@ -19,7 +19,7 @@ var w = 20;
 
 
 function setup() {
-	createCanvas(200, 200);
+	createCanvas(401, 401);
 	cols = floor(width / w);
 	rows = floor(height / w);
 	grid = make2DArray(cols, rows);
