@@ -19,19 +19,15 @@ class shopController extends Controller
         // sæki id í json sem ég valdi 
 		$location = storage_path()."/app/Json/langbest.json";
     	$json = json_decode(file_get_contents($location), true);
-    	$langbest = $json["langbest"][$value];
-        // encode object frá langbest json
-        $code = json_encode($langbest);
-        // sekji gögnin í cart json
     	$innPutlocation = storage_path()."/app/Json/cart.json";
-        $data = json_decode(file_get_contents($innPutlocation),true);
-        // pusha object úr lanbest json í cart json 
-        array_push($data, $code);
-        // encoda cart json
-        $obj = json_encode($data);
-        // skila cart json
-        file_put_contents($innPutlocation,$obj );
-		return view('lokaverk/derp',compact('data'));
+        $data = json_decode(file_get_contents($innPutlocation),true);     
+        $langbest = array($data);
+        array_push($langbest,$json["langbest"][$value]);
+        $derp = $langbest;
+        $sam = json_encode($derp);
+        
+        file_put_contents($innPutlocation,$sam );
+		return view('lokaverk/derp',compact('langbest'));
 	}
 
 	public function getIndex2()

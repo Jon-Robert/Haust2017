@@ -5,6 +5,6 @@
 	<meta charset="utf-8">
 </head>
 <body>
-<p><?php  print_r($obj); ?></p>
+<p><?php  print_r($langbest); ?></p>
 </body>
 </html>
