@@ -10,11 +10,8 @@ function Cell(i, j, w) {
 	this.y = j*w;
 	this.w = w;
 	this.neighborCount = 0;
-	if (random(1) < 0.5) {
-		this.bee = true;
-	} else {
-		this.bee = false;
-	}
+	
+	this.bee = false;
 	this.revealed = false;
 }
 
