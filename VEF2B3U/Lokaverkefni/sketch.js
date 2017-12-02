@@ -37,7 +37,7 @@ function setup() {
 		}
 	}
 
-	
+
 	
   for (var n = 0; n < totalBees; n++) {
     var index = floor(random(options.length));
@@ -59,11 +59,25 @@ function setup() {
 	
 }
 
+function gameOver() {
+	for (var i = 0; i < cols; i++) {
+		for (var j = 0; j < rows; j++) {
+			grid[i][j].revealed = true;
+		}
+	}
+}
+
+
+
 function mousePressed() {
 	for (var i = 0; i < cols; i++) {
 		for (var j = 0; j < rows; j++) {
 			if (grid[i][j].contains(mouseX, mouseY)) {
 				grid[i][j].reveal();
+			
+				if (grid[i][j].bee) {
+					gameOver();
+				}
 			}
 		}
 	}
