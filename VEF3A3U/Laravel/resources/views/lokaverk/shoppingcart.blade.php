@@ -22,6 +22,11 @@ Langbest shopping cart
 			    </div>
 			  </div> 
 			@endforeach 
+			
+		
+    	
+  		
+	
 
 	</div>
 @endsection

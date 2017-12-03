@@ -11,8 +11,14 @@ class shopController extends Controller
 	{
 	$location = storage_path()."/app/Json/langbest.json";
     $json = json_decode(file_get_contents($location), true);
+    $total = storage_path()."/app/Json/cart.json";
+    $cart = json_decode(file_get_contents($total), true);
+        $price = 0;
+        foreach ($cart as $key) {
+            $price+=$key['price'];
+        }
     $langbest = $json["langbest"];
-    return view('lokaverk/index',compact('langbest'));
+    return view('lokaverk/index',compact('langbest'),compact('price'));
 	}
 
 	public function getIndex($value)
@@ -40,8 +46,14 @@ class shopController extends Controller
 		
         $location = storage_path()."/app/Json/cart.json";
         $cart = json_decode(file_get_contents($location), true);
-      
-    	return view('lokaverk/shoppingcart',compact('cart'));
+        $price = 0;
+        foreach ($cart as $key) {
+            $price+=$key['price'];
+        }
+        if ($price==0) {
+            return redirect('lokaverk');
+        }
+    	return view('lokaverk/shoppingcart',compact('cart'),compact('price'));
 		
 	}
 
@@ -62,6 +74,7 @@ class shopController extends Controller
         
         }
         file_put_contents($innPutlocation,json_encode($shoppingCart));
+
          return back()->withInput();
     }
 
