@@ -50,8 +50,19 @@ class shopController extends Controller
     {
         
         $innPutlocation = storage_path()."/app/Json/cart.json";
-        $cart = json_decode(file_get_contents($innPutlocation),true);     
-        return view('lokaverk/derp',compact('cart'));
+        $cart = json_decode(file_get_contents($innPutlocation),true);  
+        $shoppingCart = array();
+        foreach ($cart as $key ) {
+            if ($key['id'] == $id) {
+              
+            }
+            else{
+                array_push($shoppingCart, $key);
+            }
+        
+        }
+        file_put_contents($innPutlocation,json_encode($shoppingCart));
+         return back()->withInput();
     }
 
     
