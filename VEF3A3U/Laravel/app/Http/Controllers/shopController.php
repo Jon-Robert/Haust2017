@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
 
 class shopController extends Controller
 {
@@ -31,19 +32,30 @@ class shopController extends Controller
         }
         }
         file_put_contents($innPutlocation,json_encode($cart));
-		return view('lokaverk/derp',compact('data'));
+		 return back()->withInput();
 	}
 
-	public function getIndex2()
+	public function getCart()
 	{
-		$location = storage_path()."/app/Json/cart.json";
-    	$json = json_decode(file_get_contents($location), true);
-    	return view('lokaverk/derp',compact('json'));
-    	
-
-
-    
-    	
+		
+        $location = storage_path()."/app/Json/cart.json";
+        $cart = json_decode(file_get_contents($location), true);
+      
+    	return view('lokaverk/shoppingcart',compact('cart'));
 		
 	}
+
+
+    public function removeIndex($id)
+    {
+        
+        $innPutlocation = storage_path()."/app/Json/cart.json";
+        $cart = json_decode(file_get_contents($innPutlocation),true);     
+        return view('lokaverk/derp',compact('cart'));
+    }
+
+    
+   
+
+
 }

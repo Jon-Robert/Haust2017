@@ -17,13 +17,8 @@ Route::get('test','jsonController@test');
 Route::get('api','jsonController@getJson');
 Route::get('lokaverk','shopController@index');
 Route::get('lokaverk/{id}','shopController@getIndex');
-Route::get('derp','shopController@getIndex2');
-
-
-
-
-
-
+Route::get('shopping','shopController@getCart');
+Route::get('shopping/{id}','shopController@removeIndex');
 
 
 route::get('newIndex','IndexController@newIndex');
