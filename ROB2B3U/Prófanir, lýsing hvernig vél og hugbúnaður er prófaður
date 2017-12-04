@@ -1,0 +1,14 @@
+Prófarnir á verkefninu fór framm með að testa mótor í - og + til að finna út hvað var upp, niður, vinstri og hægri. 
+þegar það var fundið út var það skrifað niður glósu.
+Næst á dagskrá var að finna út hve langt strik er. 
+eftir að hafa testað nokkra utfærslur í encoder fannst mér 1000 vera þægileg fjarlægð.
+svo var farið að testa hraðan, hversu hratt hann ætti að skrifa. 
+vandinn við það var að hann má ekki vera of hægur svo hann gengur ekki og ekki of hraður til að mynda skekkju vegna encoder.
+eftir að hafa prufað nokkra hraða kom 40 best út.
+
+eftir það þurfti ég bara að setja þetta í void og gera call á nokkur strik til að gera tölustaf.
+
+til að skrifa úr random tölu þurfti ég að gera forlykkju og random tölu inn í henni til að vitna í tölustafi 
+til að calla á staf notaði ég if færslu. 
+
+það  gekk vel svo það var allt sem komið er.
