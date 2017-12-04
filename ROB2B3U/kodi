@@ -1,0 +1,257 @@
+#pragma config(I2C_Usage, I2C1, i2cSensors)
+#pragma config(Sensor, I2C_1,  rightIEM,       sensorQuadEncoderOnI2CPort,    , AutoAssign)
+#pragma config(Sensor, I2C_2,  leftIEM,        sensorQuadEncoderOnI2CPort,    , AutoAssign)
+#pragma config(Motor,  port2,           rightMotor,    tmotorVex269, openLoop, reversed, encoder, encoderPort, I2C_1, 1000)
+#pragma config(Motor,  port3,           leftMotor,     tmotorVex269, openLoop, encoder, encoderPort, I2C_2, 1000)
+
+
+	// left motor - goes to the left
+	// left motor + goes to the right
+	// right motor - goes up
+	// right motor + goes down
+
+void clearEncoder()
+{
+	nMotorEncoder[rightMotor] = 0;
+	nMotorEncoder[leftMotor] = 0;
+}
+void clearMotor()
+{
+	motor[rightMotor] = 0;
+	motor[leftMotor] = 0;
+}
+void clear()
+{
+	clearEncoder();
+	clearMotor();
+}
+
+//------------------------ solid
+
+
+void driveMotorLeft()
+{
+
+	clearEncoder();
+	while (nMotorEncoder[leftMotor] < 1000)
+	{
+		motor[leftMotor] = -40;
+	}
+	clearMotor();
+}
+void driveMotorRight()
+{
+
+	clearEncoder();
+	while (nMotorEncoder[leftMotor] > -1000)
+	{
+		motor[leftMotor] = 40;
+	}
+	clearMotor();
+}
+
+
+void driveMotorUp()
+{
+	clearEncoder();
+	while (nMotorEncoder[rightMotor] < 1000)
+	{
+		motor[rightMotor] = -40;
+	}
+	clearMotor();
+}
+
+void driveMotorDown()
+{
+	clearEncoder();
+	while (nMotorEncoder[rightMotor] > -1000)
+	{
+		motor[rightMotor] = 40;
+	}
+	clearMotor();
+}
+
+void tala0()
+{
+	clearEncoder();
+	driveMotorRight();
+	driveMotorUp();
+	driveMotorUp();
+	driveMotorLeft();
+	driveMotorDown();
+	driveMotorDown();
+	driveMotorRight();
+}
+void tala1 ()
+{
+	clearEncoder();
+	driveMotorUp();
+	driveMotorUp();
+	// ----
+	driveMotorDown();
+	driveMotorDown();
+}
+void tala2()
+{
+	clearEncoder();
+	driveMotorUp();
+	driveMotorRight();
+	driveMotorUp();
+	driveMotorLeft();
+	//----
+	driveMotorRight();
+	driveMotorDown();
+	driveMotorLeft();
+	driveMotorDown();
+	driveMotorRight();
+}
+void tala3()
+{
+	clearEncoder();
+	driveMotorRight();
+	driveMotorUp();
+	driveMotorLeft();
+	driveMotorRight();
+	driveMotorUp();
+	driveMotorLeft();
+	driveMotorRight();
+	//--------------- line back
+	driveMotorDown();
+	driveMotorDown();
+}
+void tala4()
+{
+	clearEncoder();
+	driveMotorRight();
+	driveMotorUp();
+	driveMotorLeft();
+	driveMotorUp();
+	//---- line back
+	driveMotorDown();
+	driveMotorRight();
+	//--- line forward
+	driveMotorUp();
+	//---- line back
+	driveMotorDown();
+	driveMotorDown();
+}
+void tala5()
+{
+	clearEncoder();
+	driveMotorRight();
+	driveMotorUp();
+	driveMotorLeft();
+	driveMotorUp();
+	driveMotorRight();
+	//-------- line back
+	driveMotorLeft();
+	driveMotorDown();
+	driveMotorRight();
+	driveMotorDown();
+}
+void tala6()
+{
+	clearEncoder();
+	driveMotorRight();
+	driveMotorUp();
+	driveMotorLeft();
+	driveMotorUp();
+	driveMotorRight();
+	//---- line back
+	driveMotorLeft();
+	driveMotorDown();
+	driveMotorDown();
+	driveMotorRight();
+}
+void tala7()
+{
+	clearEncoder();
+	driveMotorRight();
+	driveMotorUp();
+	driveMotorUp();
+	driveMotorLeft();
+	//--- line back
+	driveMotorRight();
+	driveMotorDown();
+	driveMotorDown();
+}
+void tala8()
+{
+	clearEncoder();
+	driveMotorUp();
+	driveMotorRight();
+	driveMotorLeft();
+	driveMotorUp();
+	driveMotorRight();
+	driveMotorDown();
+	driveMotorDown();
+	driveMotorLeft();
+	driveMotorRight();
+}
+void tala9()
+{
+	clearEncoder();
+	driveMotorRight();
+	driveMotorUp();
+	driveMotorUp();
+	driveMotorLeft();
+	driveMotorDown();
+	driveMotorRight();
+	driveMotorDown();
+}
+
+
+task main
+{
+	for(int i=0; i< 4; i++){
+		int numer = random(9);
+		if(numer == 0){
+				tala0();
+				driveMotorRight();
+		}
+		if(numer == 1){
+				tala1();
+				driveMotorRight();
+		}
+		if(numer == 2){
+				tala2();
+				driveMotorRight();
+		}
+		if(numer == 3){
+				tala3();
+				driveMotorRight();
+		}
+		if(numer == 4){
+				tala4();
+				driveMotorRight();
+		}
+		if(numer == 5){
+				tala5();
+				driveMotorRight();
+		}
+		if(numer == 6){
+				tala6();
+				driveMotorRight();
+		}
+		if(numer == 7){
+				tala7();
+				driveMotorRight();
+		}
+		if(numer == 8){
+				tala8();
+				driveMotorRight();
+		}
+		if(numer == 9){
+				tala9();
+				driveMotorRight();
+		}
+	}
+	wait1Msec(2000);
+		driveMotorLeft();
+		driveMotorLeft();
+		driveMotorLeft();
+		driveMotorLeft();
+		driveMotorLeft();
+		driveMotorLeft();
+
+}
